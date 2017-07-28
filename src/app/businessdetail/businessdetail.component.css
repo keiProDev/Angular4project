@@ -1,0 +1,322 @@
+/*reset password css start*/
+.for_reset_pass{
+	width: 100%;
+	height: 800px;
+    background-color: #efefef;
+	font-family: 'Lato', sans-serif;
+	margin-top:100px;
+}
+.reset_pass{
+	margin: 0 auto;
+	width: 795px;
+}
+.form_title{
+	font-size: 21px;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin: 30px 0 20px 0;
+}
+.reset_pass form{
+	background-color: #fff;
+	border-radius: 8px;
+	height: 240px;
+	box-shadow: 5px 5px 5px rgb(230,230,230)
+}
+.reset_pass form .form-group{
+	margin: 17px 0 10px 0;
+}
+.form-group label{
+	font-size: 13px;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin-bottom: 3px; 
+}
+.form-group select{
+    height:40px;
+    border-radius: 5px;
+    background-color:#f8f8f8;
+}
+.input-group{
+	position: relative;
+	width: 100%;
+}
+.input-group input{
+	padding-left: 40px;
+	background-color: #f8f8f8;
+	height: 40px;
+	border-radius: 4px!important;
+}
+.input-group select{
+	padding-left: 40px;
+	background-color: #f8f8f8;
+	height: 40px;
+	border-radius: 4px!important;
+}
+.form-group #state{
+    padding-left:10px;
+}
+.pass-png{
+	position: absolute;
+	top:10px;
+	left:10px;
+	z-index: 10;
+}
+.pass_require{
+	font-size: 10px;
+	color: #666;
+	font-family: 'Lato', sans-serif;
+	margin-left: 15px;
+}
+.line1, .line2{
+	padding: 0;
+}
+.line2 .form-group{
+	margin-top: 0px!important;
+}
+.pd_left7{
+	padding-left: 7px;
+}
+.pd_right7{
+	padding-right: 7px;
+}
+.mg_left15{
+	margin-left: 15px;
+}
+.submit_btn{
+	padding: 0 15px;
+}
+.submit_btn a{
+	height: 40px;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 40px;
+}
+.submit_btn a:first-child{
+	background-color: #fff;
+	color: #6a6a6a;
+	border: 0;
+	padding: 0px 25px;
+	outline: none!important;
+}
+.submit_btn a:last-child{
+	background-color: #3078c0;
+	color: #fff;
+	border-radius: 20px;
+	padding:0;
+	width: 230px;
+	outline: none!important;
+}
+/*reset password css end*/
+/*create account css start*/
+.logos{
+	text-align: center;
+	margin: 37px 0;
+}
+.logos img:first-child{
+	padding-right: 27px;
+	border-right: 2px solid #c7c7c7;
+}
+.logos img:nth-child(2){
+	padding-left: 27px;
+	padding-right: 20px;
+}
+.create_account_title{
+	padding: 15px;
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #666;
+}
+.create_acc{
+	margin: 0 auto;
+    width: 795px;
+}
+.create_acc form{
+	height: 387px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: rgb(230, 230, 230) 5px 5px 5px;
+    border-radius: 8px;
+}
+.submit_btn{
+	margin-top: 10px;
+}
+.submit_btn div{
+	height: 40px;
+	line-height: 40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13px;
+	color: #666;
+}
+.submit_btn div a{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	color: #1875f0;
+}
+.create_acc .submit_btn button{
+	width: 278px;
+}
+/*create account css end*/
+
+/*Business Details CSS start*/
+.business_detail{
+	margin: 0 auto;
+    width: 795px;
+}
+.business_detail form{
+	height: 450px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: rgb(230, 230, 230) 5px 5px 5px;
+    border-radius: 8px;
+}
+.padding15{
+	padding: 0 15px;
+}
+.business_address{
+	width: 317px;
+}
+.float_left{
+	float: left;
+}
+.suburb{
+	width: 195px;
+}
+.postcode{
+	width: 141px;
+}
+.state{
+	width: 110px;
+}
+.business_detail .submit_btn button{
+	margin-top: 7px;
+}
+.postcode input{
+		padding-left:10px!important;
+	}
+/*Business Details CSS start*/
+
+
+@media screen and (max-width:750px){
+	.pd_right7,.pd_left7{
+		padding-right: 0px!important;
+		padding-left: 0px!important;
+	}
+	.padding15{
+		padding:0px;
+	}
+	.mg_left15{
+		margin-left:0px;
+	}
+	.container{
+		padding:0px;
+	}
+	.for_reset_pass{
+		width: 100%;
+		height: auto;
+		background-color: #efefef;
+		margin:0px;
+		padding:0px;
+	}
+	.business_detail{
+		margin: 0 auto;
+		margin-top:2.8vw;
+		width: 100%;
+	}
+	.business_detail form{
+		width:100%;
+		height: 100%;
+		overflow: hidden;
+		text-align: center;
+		padding:6.267vw 6.667vw 4.933vw 6.667vw;
+	}
+	.business_address,.state{
+		width:100%;
+	}
+	.create_account_title{
+		font-size:5.067vw;
+		padding-top:0px;
+		padding-bottom:8.2vw;
+	}
+	.suburb {
+		width:48.33vw;
+	}
+	.postcode {
+		width:27.73vw;
+		float:right;
+	}
+	.form-group label{
+		display: none;
+	}
+	.logos img:first-child{
+		width:20.533vw;
+		height:8.2667vw;
+		padding-right:3.4vw;
+	}
+	.logos img:nth-child(2){
+		width:25.466vw;
+		height:7.333vw;
+		padding-left:3.4vw;
+		padding-right:0;
+	}
+	.pass-png[_ngcontent-c3] {
+		top:2vw;
+		left:2vw;
+		width:6vw;
+		height:6vw;
+	}
+	.logos img:last-child{
+		width:32.667vw;
+		height:8.2667vw;
+		padding-left:3.4vw;
+	}
+	.postcode input{
+		padding-left:10px!important;
+	}
+	.input-group input{
+		padding-left: 10.667vw;
+		background-color: #f8f8f8;
+		height: 10.667vw;
+		border-radius: 4px!important;
+		font-size:3.466vw;
+	}
+	.input-group select{
+		padding-left: 10.667vw;
+		background-color: #f8f8f8;
+		height: 10.667vw;
+		border-radius: 4px!important;
+		font-size:3.466vw;
+	}
+	.submit_btn{
+		padding:0;
+	}
+	.submit_btn a:last-child{
+		width:100%;
+		height:10.667vw;
+		font-size:2.9333vw;
+		line-height: 10.667vw;
+		border-radius: 5.4vw;
+		margin-top:2.6667vw;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,16 +1,24 @@
-<div class="row top-bar">
-  <div class="col-xs-4">
+<div *ngIf="nav.visible" class="row top-bar">
+  <div  class="col-xs-4">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </div>
   <div class="col-xs-4">
     <img src="../assets/images/logo.png" class="logo-img img-responsive">
   </div>
-  <div class="col-xs-4">
-    <img src="../assets/images/avatar.png" class="avatar img-circle" alt="avatar">
-    <h4 class="avatar-title">HI MR BURNS!</h4>
+  <div class="col-xs-4 dropdown">
+      <a class="nav-link dropdown-toggle" id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar.png" class="avatar img-circle" alt="avatar"></a>
+      <h4 class="avatar-title">HI MR BURNS!</h4>
+      <ul class="dropdown-menu profile-dropdown" aria-labelledby="profile">
+            <li><a routerLink="editprofile" class="dropdown-item" href="#">Edit Profile</a></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a routerLink="/createaccount" class="dropdown-item" href="#">CreateAccount</a></li>
+            <li><a routerLink="/business" href="#">Business</a></li>
+            <li><a routerLink="/decline" class="dropdown-item" href="#">Decline</a></li>
+            <li><a routerLink="/resetpassword" href="#">Resetpassword</a></li>
+      </ul>
   </div>
 </div>
-<div class="row sub-menu">
+<div *ngIf="nav.visible" class="row sub-menu">
   <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">

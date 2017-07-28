@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output , EventEmitter } from '@angular/core';
+import { NavbarService } from '../navbar.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   pageTitle = "My Rosters";
-  constructor() { }
-
+   constructor(public nav: NavbarService) {
+    
+  }
   ngOnInit() {
+    
   }
   changePage(page_title){
     this.pageTitle = page_title;
   }
-
 }
+

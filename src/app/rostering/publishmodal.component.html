@@ -1,0 +1,13 @@
+<h1 md-dialog-title>Publish Shifts for <br>W/Ending 15/04/2017</h1>
+<md-dialog-content>
+    <h6>Choose how to send the rosters</h6>
+    <md-radio-group class="ps-radio-group" [(ngModel)]="psTypeValue">
+        <md-radio-button class="ps-radio-button" disableRipple *ngFor="let psOption of psOptions" [value]="psOption">
+            {{psOption}}
+        </md-radio-button>
+    </md-radio-group>
+    <div class="button-group">
+        <button md-button class="btn cancel-btn" md-dialog-close>CANCEL</button>
+        <button class="btn btn-primary continue-btn" [md-dialog-close]="true" (click)="openConfirm()">CONTINUE</button>
+    </div>
+</md-dialog-content>

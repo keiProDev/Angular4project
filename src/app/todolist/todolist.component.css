@@ -1,0 +1,131 @@
+.title-field{
+    text-align: center;
+}
+
+.title-field h1{
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size:20px;
+    color:#666666;
+
+}
+.title-field h5{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size:16px;
+    color:#666666;
+
+}
+
+.todo-list .search-field{
+    position: relative;
+    margin-top:24px;
+    font-size:13px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+.todo-list .search-field .search-icon{
+    position: absolute;
+    font-size:16px;
+    color:#c4c4c4;
+    left:12px;
+    top:12px;
+}
+.todo-list .search-field .search-input{
+    height:40px;
+    padding-left: 30px;
+}
+.todo-list .item-panel{
+    position: relative;
+    background-color:white;
+    border:1px solid #d9d9d9;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #d9d9d9;
+    margin-top:20px;
+    padding:15px;
+    height:95px;
+}
+.todo-list .item-panel .item-info h4{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size:13px;
+    margin:0px 0px 3px 0px!important;
+    color:#333;
+}
+.todo-list .item-panel .item-info h4:first-child{
+    font-weight: bold;
+}
+.todo-list .item-panel .item-info h4:nth-child(3){
+    color:#8f8f8f;
+}
+.todo-list .item-panel .checkbox{
+    position: absolute;
+    right:0;
+    top:5px;
+    bottom:0;
+    width:46px;
+    height:80px;
+    border-left:1px solid #c6c6c6;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+.checkbox{
+    margin-top:0px;
+}
+.checkbox label{
+    padding-left:14px!important;
+    padding-top:30px!important;
+}
+.checkbox label:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+
+.checkbox .cr .cr-icon{
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+    color:white;
+}
+
+
+.checkbox label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+
+}
+.checkbox label input[type="checkbox"]:checked + .cr{
+    background-color: #52bd8a;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr{
+    opacity: .5;
+}

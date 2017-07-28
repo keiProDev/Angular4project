@@ -1,0 +1,139 @@
+.for_reset_pass{
+	width: 100%;
+	height: 800px;
+	background-color: #efefef;
+	margin-top:100px;	
+}
+.pd_left7{
+	padding-left: 7px;
+}
+.pd_right7{
+	padding-right: 7px;
+}
+.submit_btn{
+	padding: 0 15px;
+}
+
+.submit_btn .next-btn{
+	background-color: #3078c0;
+	color: #fff;
+	border-radius: 40px;
+	padding:0;
+	font-size: 11px;
+	line-height: 40px;
+	width: 230px;
+	outline: none!important;
+}
+.logos{
+	text-align: center;
+	margin: 37px 0;
+}
+.logos img:first-child{
+	padding-right: 27px;
+	border-right: 2px solid #c7c7c7;
+}
+.logos img:nth-child(2){
+	padding-left: 27px;
+	padding-right: 20px;
+}
+
+.create_acc{
+	margin: 0 auto;
+    width: 795px;
+}
+.create_acc form{
+	height: 387px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: rgb(230, 230, 230) 5px 5px 5px;
+    border-radius: 8px;
+}
+.submit_btn{
+	margin-top: 10px;
+}
+.mobile-title{
+    display: none;
+}
+.ok-img{
+    display: none;
+}
+
+@media screen and (max-width:750px){
+	.pd_right7,.pd_left7{
+		padding-right: 0px!important;
+		padding-left: 0px!important;
+	}
+	.create_acc{
+		margin: 0 auto;
+		margin-top:2.8vw;
+		width: 100%;
+	}
+	.for_reset_pass{
+		width: 100%;
+		height: auto;
+		background-color: #efefef;
+		margin:0px;
+		padding:0px;
+    }
+    .create_acc form{
+        max-width:722px;
+        max-height:966px;
+        width:100%;
+        height:100%;
+        overflow: hidden;
+        padding: 10vw 10vw;
+        background-color:#38c591;
+    }
+    .ok-img{
+        display: block;
+        text-align: center;
+    }
+    .ok-img img{
+        width:44.4vw;
+        height:44.4vw;
+    }
+    .title{
+        text-align: center;
+    }
+    .title .thanks-title{
+        color:white;
+        font-family:'Lato';
+        font-size:6.4vw;
+        font-weight: 300;
+        margin-top:7.6vw;
+    }
+    .title .info-title{
+        color:white;
+        font-family:'Lato';
+        font-size:4.2667vw;
+        font-weight: 400;
+        margin-top:6.667vw;
+    }
+	.submit_btn .next-btn{
+		border-radius: 10.667vw;
+		font-size: 2.933vw;
+		line-height: 10.667vw;
+		width: 100%;
+		height: 10.667vw;
+		clear: both;
+		margin-top:8vw;
+    }
+    .mobile-title{
+		display: block;
+		text-align: center;
+		font-size:4.267vw;
+		font-family: 'Lato';
+		font-weight: 300;
+		color:#666;
+		margin-top:2.8vw;
+	}
+	.mobile-title .group-title{
+		font-size:4.8vw;
+		font-family: 'Lato';
+		font-weight: 700;
+		color:#666;
+	}
+    .logos{
+		display: none;
+	}
+
+}

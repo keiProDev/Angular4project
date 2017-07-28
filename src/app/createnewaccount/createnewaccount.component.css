@@ -1,0 +1,238 @@
+.for_reset_pass{
+	width: 100%;
+	height: 800px;
+	background-color: #efefef;
+	margin-top:100px;	
+}
+.reset_pass{
+	margin: 0 auto;
+	width: 795px;
+	
+}
+.form_title{
+	font-size: 21px;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin: 30px 0 20px 0;
+}
+.reset_pass form{
+	background-color: #fff;
+	border-radius: 8px;
+	height: 240px;
+	box-shadow: 5px 5px 5px rgb(230,230,230)
+}
+.reset_pass form .form-group{
+	margin: 17px 0 10px 0;
+}
+.form-group label{
+	font-size: 13px;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin-bottom: 3px; 
+}
+.input-group{
+	position: relative;
+	width: 100%;
+}
+.input-group input{
+	padding-left: 40px;
+	background-color: #f8f8f8;
+	height: 40px;
+	border-radius: 4px!important;
+}
+.pass-png{
+	position: absolute;
+	top:10px;
+	left:10px;
+	z-index: 10;
+}
+.pass_require{
+	font-size: 10px;
+	color: #666;
+	font-family: 'Lato', sans-serif;
+	margin-left: 15px;
+}
+.line1, .line2{
+	padding: 0;
+}
+.line2 .form-group{
+	margin-top: 0px!important;
+}
+.pd_left7{
+	padding-left: 7px;
+}
+.pd_right7{
+	padding-right: 7px;
+}
+.submit_btn{
+	padding: 0 15px;
+}
+.submit_btn a{
+	height: 40px;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	
+	
+}
+.submit_btn .next-btn{
+	background-color: #3078c0;
+	color: #fff;
+	border-radius: 40px;
+	padding:0;
+	font-size: 11px;
+	line-height: 40px;
+	width: 230px;
+	outline: none!important;
+}
+.logos{
+	text-align: center;
+	margin: 37px 0;
+}
+.logos img:first-child{
+	padding-right: 27px;
+	border-right: 2px solid #c7c7c7;
+}
+.logos img:nth-child(2){
+	padding-left: 27px;
+	padding-right: 20px;
+}
+.create_account_title{
+	padding: 15px;
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #666;
+}
+.create_acc{
+	margin: 0 auto;
+    width: 795px;
+}
+.create_acc form{
+	height: 387px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: rgb(230, 230, 230) 5px 5px 5px;
+    border-radius: 8px;
+}
+.submit_btn{
+	margin-top: 10px;
+}
+.submit_btn div{
+	height: 40px;
+	line-height: 40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13px;
+	color: #666;
+}
+.submit_btn div a{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	color: #1875f0;
+}
+.create_acc .submit_btn button{
+	width: 278px;
+}
+.mobile-title{
+	display: none;
+}
+.hr{
+		display: none;
+	}
+@media screen and (max-width:750px){
+	.pd_right7,.pd_left7{
+		padding-right: 0px!important;
+		padding-left: 0px!important;
+	}
+	.create_acc{
+		margin: 0 auto;
+		margin-top:2.8vw;
+		width: 100%;
+	}
+	.for_reset_pass{
+		width: 100%;
+		height: auto;
+		background-color: #efefef;
+		margin:0px;
+		padding:0px;
+	}
+	.logos{
+		display: none;
+	}
+	.create_account_title{
+		font-size:5.067vw;
+		padding-top:0px;
+		padding-bottom:8.2vw;
+	}
+	.mobile-title{
+		display: block;
+		text-align: center;
+		font-size:4.267vw;
+		font-family: 'Lato';
+		font-weight: 300;
+		color:#666;
+		margin-top:2.8vw;
+	}
+	.mobile-title .group-title{
+		font-size:4.8vw;
+		font-family: 'Lato';
+		font-weight: 700;
+		color:#666;
+	}
+	.create_acc form{
+		width:100%;
+		height: 100%;
+		overflow: hidden;
+		text-align: center;
+		padding:6.267vw 6.667vw 4.933vw 6.667vw;
+	}
+	.form-group{
+		margin-bottom:3vw;
+	}
+	.form-group label{
+		display: none;
+	}
+	.form-group .input-group input{
+		height:10.6vw;
+        font-size:3.46vw;
+        padding-left:10.6vw!important;
+	}
+	.form-group .input-group img{
+        position: absolute;
+        top:2.67vw;
+        left:2.67vw;
+        width:5.34vw;
+        height:5.6vw;
+	}
+	.pass_require{
+		display: none;
+	}
+	.submit_btn .next-btn{
+		border-radius: 10.667vw;
+		font-size: 2.933vw;
+		line-height: 10.667vw;
+		width: 100%;
+		height: 10.667vw;
+		clear: both;
+		margin-top:8vw;
+	}
+	.submit_btn div{
+		height: 10.667vw;
+		font-size: 3.46vw;
+		color: #666;
+		clear: both;
+		margin-top:5vw;
+		line-height: 3.46vw;
+	}
+	.hr{
+		display: block;
+		background-color:#f5f5f5;
+		height:2px;
+		margin:0 15px;
+		margin-bottom: 3.33vw;
+	}
+	.email-box{
+		display: none;
+	}
+}

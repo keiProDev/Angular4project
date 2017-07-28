@@ -1,0 +1,20 @@
+<div class="container-fluid login-background">
+  <div class="login-form">
+    <img class="account" src="../assets/images/account.png">
+    <form class="form-panel">
+      <div class="form-group">
+        <img src="../assets/images/email-icon.png">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <img src="../assets/images/password-icon.png">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="">
+        <a routerLink="/forgotpassword" type="button" class="pull-right forgot-pass-btn">Forgot Password</a>
+      </div>
+      <a routerLink="/rosters" type="button" class="btn btn-primary sign-in-btn" (click)="loggedIn()">SIGN IN</a>
+    </form>
+    <img class="hllogo" src="../assets/images/hllogo.png">
+  </div>
+</div>

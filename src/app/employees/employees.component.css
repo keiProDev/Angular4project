@@ -27,6 +27,8 @@
     color:#9b9b9c;
     font-family: 'Open Sans', sans-serif;
     font-size : 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px!important;
 }
 .export-csv-bar{
     height: 61px;
@@ -74,7 +76,6 @@
     font-size:14px;
     font-family: 'Open Sans', sans-serif;
     font-weight:600;
-    letter-spacing: 0.5px!important;
 }
 .data-table thead tr th:last-child{
     border-right:none;
@@ -155,9 +156,16 @@
     }
     .mobile-export-button{
         float: right;
-        width:100px;
-        border-radius: 10px;
+        width:35.33vw;
+        height:6.933vw;
+        min-width:150px;
+        min-height:40px;
+        border-radius: 1.333vw;
         display: block;
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size:2.9333vw;
+        background-color: #3078c0!important;
     }
     #accordion{
         display: block;
@@ -176,5 +184,12 @@
     .filter-bar .selectpicker{
         margin-left:15px;
         margin-right:0px;
+    }
+    .panel-group .panel+.panel{
+        margin-top:0px;
+    }
+    .panel{
+        border:none;
+        border-bottom:1px solid #f2f4f7;
     }
 }

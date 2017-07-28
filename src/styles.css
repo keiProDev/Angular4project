@@ -4,5 +4,135 @@ body{
     background-color:#efefef;
 }
 *{
-    letter-spacing: 1.2px;
+    letter-spacing: 0px;
+}
+
+/*========================
+ start - publish modal dialog
+========================*/
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.custom-backdrop-class{
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.overay-pan-background{
+    position: absolute!important;
+    margin-top: -240px!important;
+    margin-left: -215px!important;
+    top: 50%!important;
+    left: 50%!important;
+    background-color:white;
+}
+publish-modal .mat-dialog-title ,publish-confirm-modal .mat-dialog-title{
+    font-size:30px!important;
+    font-family: 'Lato';
+    font-weight: 700;
+}
+.mat-radio-label-content{
+    font-size:13px!important;
+    font-family: 'Open sans';
+    color:#9b9b9c;
+    font-weight: 500;
+}
+.mat-dialog-container{
+    padding:55px 30px 30px 30px!important;
+    overflow: hidden!important;
+}
+.mat-dialog-content h6{
+    font-family: 'Open sans';
+    font-size:13px;
+    color:#9b9b9c;
+    margin-top:0px;
+    margin-bottom: 25px;
+}
+.mat-dialog-container .button-group{
+    background-color: #f8f8f8;
+    position: absolute;
+    padding:0px;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #ebebeb;
+}
+.mat-dialog-container .button-group .continue-btn{
+    width:180px;
+    height:40px;
+    border-radius: 20px;
+    top:30px;
+    right:30px;
+    position: absolute;
+    font-family: 'Lato';
+    font-size:11px;
+    font-weight: 700;
+    outline: 0;
+}
+.mat-dialog-container .button-group .cancel-btn{
+    top:30px;
+    left:30px;
+    position: absolute;
+    font-family: 'Lato';
+    font-size:11px;
+    font-weight: 700;
+    color:#9b9b9c;
+    outline: 0;
+}
+.ps-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ps-radio-button {
+  margin: 5px;
+}
+.mat-radio-outer-circle{
+    border-color:#dadada!important;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color:#dadada;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #333333;
+}
+.success-overay-pan-background .mat-dialog-container{
+    background-color:#38c591;
+}
+publish-success-modal h1{
+    text-align: center;
+    font-size:30px!important;
+    font-weight: 'bold'!important;
+    color:white;
+    font-family: 'Lato';
+}
+publish-success-modal .img-section{
+    text-align: center;
+}
+publish-success-modal button{
+    margin-top:40px;
+    text-align: center;
+    width:180px;
+    height:40px;
+    border-radius: 20px!important;
+    outline: 0;
+}
+publish-success-modal button:active,publish-success-modal button:focus{
+    outline: 0!important;
+}
+publish-success-modal .mat-dialog-content{
+    text-align: center;
+}
+md-radio-button{
+    margin-top:0!important;
+}
+/*========================
+ end - publish modal dialog
+========================*/
+
+.side-nav-container md-sidenav{
+    max-width:250px!important;
 }

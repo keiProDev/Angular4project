@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavbarService } from '../navbar.service';
 @Component({
   selector: 'app-rosters',
   templateUrl: './rosters.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RostersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavbarService) { }
 
   ngOnInit() {
+    this.nav.show();
   }
 
 }

@@ -1,0 +1,136 @@
+.login-background{
+    padding:0!important;
+    margin:0 -15px!important;
+    background-image: url('../../assets/images/loginback.png');
+    background-size:1920px 100vh;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.form-panel{
+    width:362px;
+    height:284px;
+    background-color:white;
+    padding:35px 25px 30px 25px;
+    border-radius: 5px;
+    margin:50px auto 30px auto;
+}
+.form-panel .form-group input{
+    height:38px;
+    background-color:#f8f8f8;
+    font-family: 'Open Sans', sans-serif;
+    font-size : 13px;
+    font-weight: 600;
+}
+.forgot-pass-btn{
+    font-family: 'Lato';
+    font-size: 13px;
+    font-weight: bold;
+}
+.form-panel .sign-in-btn{
+    width:100%;
+    height:40px;
+    font-size:11px;
+    font-family:'Lato';
+    font-weight: bold;
+    padding:0;
+    line-height: 40px;
+    border-radius: 20px;
+    margin-top:60px;
+}
+.login-form{
+    text-align: center;
+    position: absolute;
+    left:0;
+    right:0;
+    top:50%;
+    margin-top:-244px;
+}
+.login-form form .form-group{
+    position: relative;
+    margin-bottom:10px!important;
+}
+.login-form form .form-group img{
+    position: absolute;
+    top:9px;
+    left:8px;
+}
+.login-form form .form-group input{
+    padding-left:35px;
+}
+.account{
+    width:323px;
+    height:92px;
+}
+.hllogo{
+    width:69px;
+    height:27px;
+}
+@media screen and (max-width:750px){
+    .login-background{
+        padding:0!important;
+        margin:0 -15px!important;
+        background-image: url('../../assets/images/mobile-background.png');
+        background-size:100% 100vh;
+        background-repeat:no-repeat;
+    }
+    .hllogo{
+        position: fixed;
+        left:20px;
+        top:20px;
+        width:18.132vw;
+        height:7.2vw;
+    }
+    .account{
+        max-width:555px;
+        width:80%;
+        height:auto;
+    }
+    .login-form{
+        padding:0 15px;
+        position: relative;
+        margin-top: 22vw;
+        top:initial;
+    }
+    .login-form form{
+        margin-top:20.8vw;
+    }
+    .form-panel{
+        max-width:722px;
+        max-height:556px;
+        width:100%;
+        height:auto;
+        overflow: hidden;
+        padding: 10vw 10vw;
+    }
+    .login-form form .form-group{
+        margin-bottom:3vw!important;
+    }
+    .form-panel .form-group .form-control{
+        height:10.6vw;
+        font-size:3.46vw;
+        padding-left:10.6vw!important;
+    }
+    .login-form form .form-group img{
+        position: absolute;
+        top:2.67vw;
+        left:2.67vw;
+        width:5.34vw;
+        height:5.6vw;
+    }
+    .form-panel .sign-in-btn{
+        width:100%;
+        height:10.667vw;
+        font-size:2.93vw;
+        font-family:'Lato';
+        font-weight: bold;
+        padding:0;
+        line-height: 10.667vw;
+        border-radius: 5.334vw;
+        margin-top: 16vw;
+    }
+    .forgot-pass-btn{
+        font-family: 'Lato';
+        font-size: 3.467vw;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,320 @@
+.title-field{
+    position: relative;
+    text-align: center;
+    margin:0 auto;
+    margin-top:150px;
+    width:794px;
+
+}
+.title-field .title{
+    font-family: 'Lato';
+    font-size:20px;
+    font-weight: 700;
+    color:#666666;
+}
+.title-field .username{
+    font-family: 'Lato';
+    font-size:16px;
+    font-weight: 300;
+    margin-top:17px;
+    color:#666666;
+}
+.title-field .menu-btn{
+    position: absolute;
+    right:0;
+    top:0;
+}
+.title-field .menu-btn img{
+    width:41px;
+    height:36px;
+}
+.shift-panel{
+    width:794px;
+    height:292px;
+    border-radius: 10px;
+    background-color:#e86757;
+    margin:0 auto;
+    margin-top:25px;
+    padding-top:12px;
+}
+.shift-panel .info{
+    width:773px;
+    height:94px;
+    margin:0 auto;
+    background-color:white;
+    border-radius: 5px;
+}
+.reason-title{
+    height:48px;
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    font-weight: 500;
+    color:white;
+    margin-left:12px;
+    padding-top:23px;
+}
+.shift-panel .reason-input{
+    width:773px;
+    height:128px;
+    margin:0 auto;
+    background-color:#f5dbd8;
+    border-radius: 5px;
+}
+.reason-input textarea{
+    width:100%;
+    height:100%;
+    outline: 0;
+    border: 0;
+    background-color:#f5dbd8;
+    resize: none;
+}
+.shift-panel .info .day-field{
+    float: left;
+    position: relative;
+    width:62px;
+    height:94px;
+    padding:5px;
+    
+}
+.shift-panel .info .day-field .day{
+    padding-top:18px;
+    margin-left:15px;
+    text-align: center;
+
+}
+.shift-panel .info .day-field .day .date{
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size:22.5px;
+    color:#8f8f8f;
+}
+.shift-panel .info .day-field .day .week{
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size:11px;
+    color:#393939;
+    margin-top:-5px;
+}
+.shift-panel .info .time-field{
+    float:left;
+    height: 80%;
+    margin-top:10px;
+    padding-left:12px;
+    padding-top:10px;
+    border-left:2px solid #c6c6c6;
+}
+.shift-panel .info .time-field .time{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size:20px;
+    color:#333333;
+}
+.shift-panel .info .time-field .user-role{
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size:13px;
+    color:#8f8f8f;
+}
+.shift-panel .info .time-field .user-role b{
+    color:#333333;
+}
+.stick{
+    position: absolute;
+    width:7px;
+    height:80%;
+    border-radius: 3px;
+    left:6px;
+    top:10%;
+}
+.blue-stick{
+    background-color:#3385d7;
+}
+.red-stick{
+    background-color:#ff8475;
+}
+.green-stick{
+    background-color:#4bc190;
+}
+.button-group{
+    margin:0 auto;
+    width:773px;
+    margin-top:10px;
+}
+.button-group .cancel-btn{
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size:11px;
+    padding:0;
+    line-height: 40px;
+    color:#6a6a6a;
+    margin-right:35px;
+}
+.button-group .decline-btn{
+    width:160px;
+    height:40px;
+    border-radius: 20px;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size:11px;
+    padding:0;
+    line-height: 40px;
+    color:#fff;
+    
+}
+
+@media screen and (max-width:750px){
+    .container{
+        padding:0!important;
+    }
+    .stick{
+        width:1vw;
+    }
+    .shift-panel{
+        width:96.26vw;
+        height:74.26vw; 
+        margin:0 auto;
+        margin-top:5vw;
+        padding-top:2.4vw;
+        margin-left:-7.5px;
+    }
+    .shift-panel .info{
+        width:91.3vw;
+        height:25.06vw;
+        margin:0 auto;
+        background-color:white;
+        border-radius: 5px;
+    }
+    .reason-title{
+        height:9.86vw;
+        font-family: 'Open Sans', sans-serif;
+        font-size:3.467vw;
+        font-weight: 500;
+        color:white;
+        margin-left:2vw;
+        padding-top:3.067vw;
+    }
+    .shift-panel .reason-input{
+        width:91.33vw;
+        height:34.133vw;
+        margin:0 auto;
+        background-color:#f5dbd8;
+        border-radius: 5px;
+    }
+    .reason-input textarea{
+        width:100%;
+        height:100%;
+        outline: 0;
+        border: 0;
+        background-color:#f5dbd8;
+        resize: none;
+        font-size:3.4667vw;
+        padding:2.667vw;
+    }
+    .shift-panel .info .day-field{
+        float: left;
+        position: relative;
+        width:16.667vw;
+        height:25.2vw;
+        padding:5px;
+        
+    }
+    .shift-panel .info .day-field .day{
+        padding-top:4.8vw;
+        margin-left:2vw;
+        text-align: center;
+    }
+    .shift-panel .info .day-field .day .date{
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size:6vw;
+        color:#8f8f8f;
+    }
+    .shift-panel .info .day-field .day .week{
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size:2.9333vw;
+        color:#393939;
+        margin-top:-0.667vw;
+    }
+    .shift-panel .info .time-field{
+        float:left;
+        height: 80%;
+        margin-top:2.6667vw;
+        padding-left:2.6667vw;
+        padding-top:4vw;
+        border-left:2px solid #c6c6c6;
+    }
+    .shift-panel .info .time-field .time{
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size:4.2667vw;
+        color:#333333;
+    }
+    .shift-panel .info .time-field .user-role{
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size:2.6667vw;
+        padding-top:0.6667vw;
+        color:#8f8f8f;
+    }
+    .shift-panel .info .time-field .user-role b{
+        color:#333333;
+    }
+    .button-group{
+        margin-top:24vw;
+        position: relative;
+        width:initial
+    }
+    .button-group .cancel-btn{
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size:2.933vw;
+        padding:0;
+        line-height: 10.6667vw;
+        color:#6a6a6a;
+        margin-right:5.3338vw;
+        position:absolute;
+        width:26.667vw;
+        left:0;
+        top:0;
+        text-align: center;
+    }
+    .button-group .decline-btn{
+        width:63.6vw;
+        height:10.6667vw;
+        border-radius: 5.3338vw;
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size:2.933vw;
+        padding:0;
+        line-height: 10.6667vw;
+        color:#fff;
+        background-color:#3078c0;
+        position:absolute;
+        left:26.667vw;
+    }
+    .title-field{
+        position: relative;
+        text-align: center;
+        margin:0 auto;
+        margin-top:4vw;
+        width:100%;
+    }
+    .title-field .title{
+        font-family: 'Lato';
+        font-size:5.6vw;
+        font-weight: 700;
+        color:#666666;
+    }
+    .title-field .username{
+        font-family: 'Lato';
+        font-size:4.2667vw;
+        font-weight: 300;
+        margin-top:0px;
+        color:#666666;
+    }
+    .title-field .menu-btn{
+        display: none;
+    }
+
+}

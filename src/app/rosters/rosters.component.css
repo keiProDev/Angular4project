@@ -1,0 +1,200 @@
+.container{
+    padding-bottom:80px;
+}
+
+.title-field{
+    text-align: center;
+}
+
+.title-field h1{
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size:20px;
+    color:#666666;
+}
+.title-field h5{
+    font-family: 'Lato';
+    font-weight: '100';
+    font-size:16px;
+    color:#666666;
+}
+.publish-shifts-bar{
+    height: 61px;
+    background-color:#fff;
+    text-align: center;
+    margin-top:20px;
+}
+.publish-shifts-bar .shifts-btn{
+    float: right;
+}
+.publish-shifts-bar .shifts-btn #dropdownMenuButton{
+    width:194px;
+    height:40px;
+    margin-top:10px;
+    margin-right:18px;
+    border-radius: 20px;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-size : 11px;
+    font-weight:bold;
+}
+.dropdown-menu .dropdown-item{
+    display: block;
+    width: 100%;
+    padding: 3px 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #292b2c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
+}
+.publish-shifts-bar .shifts-btn .dropdown-menu{
+    clear : both;
+}
+.publish-shifts-bar .week-bar{
+    margin-top:13px;
+    margin-left:13px;
+    float: none;
+    display: inline-block;
+}
+.publish-shifts-bar .week-bar button{
+    width:36px;
+    height:36px;
+    display: inline-block;
+}
+.publish-shifts-bar .week-bar h5{
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size : 12px;
+    font-weight:bold;
+    margin:0 25px;
+}
+.data-table thead tr{
+    height:59px;
+    background-color:#f2f4f7;
+    border-top:1px solid #dadcdd;
+    border-bottom:0px;
+}
+.data-table thead tr th{
+    line-height: 59px;
+    text-align: center;
+    padding:0px;
+    border-right:1px solid #dadcdd;
+    color:#8f8f8f;
+    font-size:14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
+    letter-spacing: 0.5px!important;
+}
+.data-table thead tr th:last-child{
+    border-right:none;
+}
+.data-table thead tr th b{
+    font-weight: 900;
+    color:black;
+}
+.data-table tbody tr td{
+    padding:0;
+    min-height: 39px;
+    background-color:white;
+    border-right:1px solid #dadcdd;
+    color:#666;
+    font-family: 'Lato', sans-serif;
+    font-size:13px;
+    font-weight: 600;
+    
+}
+.data-table tbody tr td .td-cell{
+    min-height: 39px;
+    padding:6px;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+    position:relative;
+    letter-spacing: 0.5px!important;
+}
+.data-table tbody tr td .td-cell .td-title{
+    font-size:14px;
+    font-weight: 700;
+}
+.data-table tbody tr td .td-cell .timeft{
+    color:#333;
+    font-size:13px;
+    font-weight: 700;
+}
+.data-table tbody tr td .td-cell .td-info{
+    color:#333;
+    font-size:13px;
+    font-weight: 400;
+}
+.data-table tbody tr td .td-cell div{
+    letter-spacing: 0.5px!important;
+}
+.data-table tbody tr td .td-cell:last-child{
+    border-bottom:0px;
+}
+.data-table tbody tr td .td-accept-decline{
+    margin:0 auto;
+    margin-top:10px;
+    display: table;
+    font-size:13px;
+    font-weight: 400;
+}
+.data-table tbody tr td .td-accept-decline .accept,.data-table tbody tr td .td-accept-decline .decline{
+    font-size:13px;
+    font-family:'Lato';
+    color:#8f8f8f;
+    display: table-cell;
+    padding:0 5px;
+    cursor: pointer;
+}
+.data-table tbody tr td .td-accept-decline .check-cross{
+    margin-top:10px;
+    height:50px;
+}
+.blue{
+    color:#3385d7;
+}
+.data-table tbody tr td .td-text{
+    margin-left:15px;
+}
+.stick{
+    position: absolute;
+    width:7px;
+    height:80%;
+    border-radius: 3px;
+    left:6px;
+    top:10%;
+}
+.blue-stick{
+    background-color:#3385d7;
+}
+.red-stick{
+    background-color:#ff8475;
+}
+.green-stick{
+    background-color:#4bc190;
+}
+
+.bg-blue{
+    background-color:#eaf3fb;
+}
+.green{
+    color:#4bc190;
+}
+.bg-green{
+    background-color:#e7f9ed;
+}
+.red{
+    color:#ff8475
+}
+.bg-red{
+    background-color:#fbeaea;
+}
+.white{
+    color:#fff
+}
+.bg-white{
+    background-color:white;
+}

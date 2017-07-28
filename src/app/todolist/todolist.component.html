@@ -1,3 +1,27 @@
-<p>
-  todolist works!
-</p>
+<div class="container">
+  <div class="title-field">
+    <h1>Business Name</h1>
+    <h5>To do list</h5>
+  </div>
+  <div class="todo-list">
+    <div class="search-field">
+      <i class="fa fa-search search-icon" aria-hidden="true"></i>
+      <input type="text" class="form-control search-input" id="search" placeholder="Search" [(ngModel)]="search">
+    </div>
+    <div class="item-panel" *ngFor="let todo of todolist | todoSearch:search">
+      <div class="item-info">
+        <h4 [ngClass]="{'strike':todo.action}">{{todo.title}}</h4>
+        <h4 [ngClass]="{'strike':todo.action}">{{todo.name}}</h4>
+        <h4 [ngClass]="{'strike':todo.action}">{{todo.time}}</h4>
+        <h4 *ngIf="!todo.action"><b>Reason:</b>{{todo.reason}}</h4>
+      </div>
+      <div class="checkbox">
+        <label style="font-size: 1em">
+        <input type="checkbox" value="" [checked]="todo.action" (change)="todo.action=!todo.action">
+        <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+</div>
