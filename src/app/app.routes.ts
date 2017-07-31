@@ -16,6 +16,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
 import { DeclineshiftComponent } from './declineshift/declineshift.component';
 import { CreateaccountsuccessComponent } from './createaccountsuccess/createaccountsuccess.component';
 import { CreatenewaccountComponent } from './createnewaccount/createnewaccount.component';
+import { ForgotpasswordemailComponent } from './forgotpasswordemail/forgotpasswordemail.component';
 const appRoutes: Routes = [
     {
       path:'',
@@ -49,6 +50,10 @@ const appRoutes: Routes = [
     {
       path:'editprofile',
       component: EditprofileComponent
+    },
+    {
+      path:'forgotemail',
+      component: ForgotpasswordemailComponent
     },
     {
       path:'resetlink',

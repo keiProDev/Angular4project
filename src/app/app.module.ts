@@ -32,6 +32,7 @@ import { EmployeeService } from './employee.service';
 import { NavbarService } from './navbar.service';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { CreatenewaccountComponent } from './createnewaccount/createnewaccount.component';
+import { ForgotpasswordemailComponent } from './forgotpasswordemail/forgotpasswordemail.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { CreatenewaccountComponent } from './createnewaccount/createnewaccount.c
     EditprofileComponent,
     DeclineshiftComponent,
     CreateaccountsuccessComponent,
-    CreatenewaccountComponent
+    CreatenewaccountComponent,
+    ForgotpasswordemailComponent
   ],
   imports: [
     BrowserModule,
