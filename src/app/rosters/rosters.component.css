@@ -171,11 +171,21 @@
     padding: 0 5px;
     cursor: pointer;
 }
+.data-table tbody tr td .td-accept-decline .accept img,
+.data-table tbody tr td .td-accept-decline .decline img{
 
+    width:40px;
+    height:40px;
+}
+.data-table tbody tr td .td-accept-decline .check-cross img{
+    width:35px;
+    height:27px;
+}
 .data-table tbody tr td .td-accept-decline .check-cross {
     margin-top: 10px;
     height: 50px;
 }
+
 
 .blue {
     color: #3385d7;

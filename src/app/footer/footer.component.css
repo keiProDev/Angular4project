@@ -22,7 +22,7 @@
     margin-top:20px;
     float:right;
 }
-@media screen and (max-width:1280px){
+/* @media screen and (max-width:1280px){
     .footer-bar{
         position: relative;
         margin:0px -15px!important;
@@ -35,7 +35,7 @@
         margin:0px -15px!important;
         margin-top:20px;
     }
-}
+} */
 @media screen and (max-width:767px){
     .footer-bar{
         display: none;

@@ -1,0 +1,52 @@
+.sidebar{
+    position : fixed;
+    width:230px;
+    height: 100vh;
+    background:#26609a;
+    left:0;
+    top:0;
+    z-index: 1000;
+}
+.close-bar{
+    text-align: center;
+    margin-top:20px;
+}
+.close-bar div{
+    font-size:30px;
+    color:white;
+    font-weight: 100;
+    font-family: 'Lato';
+    cursor: pointer;
+    
+}
+.side-items{
+    text-align: center;
+    margin-top:30px;
+}
+.side-items .item{
+    font-size:11px;
+    font-weight: 800;
+    font-family: 'Lato';
+    color:white;
+    height:58px;
+    border-bottom: 1px solid #4c89c6;
+    line-height: 58px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.signout-bar a{
+    position: fixed;
+    bottom:20px;
+    left:20px;
+    width:190px;
+    height:40px;
+    line-height: 40px;
+    color:white;
+    /* background-color:#336494; */
+    border-radius: 20px;
+    padding:0;
+    border:0px;
+    -webkit-box-shadow: rgba(0,0,0,0.5) 0 3px 10px;
+    -moz-box-shadow:  rgba(0,0,0,0.5) 0 3px 10px;
+    box-shadow: rgba(0,0,0,0.5) 0 3px 10px;
+}

@@ -1,20 +1,21 @@
 <div *ngIf="nav.visible" class="row top-bar">
   <div  class="col-xs-4">
-    <i class="fa fa-bars" aria-hidden="true"></i>
+    <i class="fa fa-bars" aria-hidden="true" (click)="show_sidebar()"></i>
   </div>
   <div class="col-xs-4">
-    <img src="../assets/images/logo.png" class="logo-img img-responsive">
+    <img src="../assets/images/wfm.png" class="logo-img img-responsive">
   </div>
-  <div class="col-xs-4 dropdown">
+  <div class="col-xs-4 dropdown" id="mainDropDown">
       <a class="nav-link dropdown-toggle" id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar.png" class="avatar img-circle" alt="avatar"></a>
       <h4 class="avatar-title">HI MR BURNS!</h4>
       <ul class="dropdown-menu profile-dropdown" aria-labelledby="profile">
-            <li><a routerLink="editprofile" class="dropdown-item" href="#">Edit Profile</a></li>
+            <li><a routerLink="editprofile" class="dropdown-item">Edit Profile</a></li>
+            <li><a class="dropdown-item" (click)="openDialog()">My Workplace</a></li>
             <li><a class="dropdown-item" href="#">Sign out</a></li>
-            <li><a routerLink="/createaccount" class="dropdown-item" href="#">CreateAccount</a></li>
+            <!-- <li><a routerLink="/createaccount" class="dropdown-item" href="#">CreateAccount</a></li>
             <li><a routerLink="/business" href="#">Business</a></li>
             <li><a routerLink="/decline" class="dropdown-item" href="#">Decline</a></li>
-            <li><a routerLink="/resetpassword" href="#">Resetpassword</a></li>
+            <li><a routerLink="/resetpassword" href="#">Resetpassword</a></li> -->
       </ul>
   </div>
 </div>
@@ -22,10 +23,12 @@
   <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <h4 class="page-title">{{pageTitle}}</h4>
+        <i class="fa fa-bars pull-left" aria-hidden="true" (click)="show_sidebar()"></i>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#subMenuBar">
+          <h4 class="page-title">{{pageTitle}}</h4>
           <i class="fa fa-chevron-down" aria-hidden="true"></i>                    
         </button>
+        <img src="../assets/images/avatar.png" class="avatar img-circle pull-right" alt="avatar" data-toggle="collapse" data-target="#profileMenuBar">
       </div>
       <div class="collapse navbar-collapse" id="subMenuBar">
         <ul class="nav navbar-nav">
@@ -34,6 +37,17 @@
           <li><a routerLink="employees" class="sub-menu-item" (click)="changePage('EMPLOYEES')">EMPLOYEES</a></li>
           <li><a routerLink="todolist" class="sub-menu-item" (click)="changePage('TO DO LIST')">TO DO LIST</a></li>
         </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="profileMenuBar">
+          <div class="btn menu-item link-item" routerLink="editprofile">
+            Edit profile
+          </div>
+          <div class="btn menu-item link-item" (click)="openDialog()">
+            My Workplace
+          </div>
+          <div class="btn menu-item" routerLink="/login">
+            Sign out
+          </div>
       </div>
     </div>
   </nav>

@@ -1,19 +1,19 @@
-<div class="container">
+<div class="desktop container">
   <div class="row filter-bar">
       <label>Order by:</label>
-      <select class="selectpicker">
-        <option>SELECT ORDER</option>
-        <option>Filter1</option>
-        <option>Filter2</option>
-        <option>Filter3</option>
-      </select>
+      <ng-select
+            placeholder="SelectFilters"
+            [options]="orderFilters"
+            [(ngModel)]="selectedOrder"
+            class="selectpicker">
+      </ng-select>
       <label>Filter by: </label>
-      <select class="selectpicker">
-        <option>ALL</option>
-        <option>Filter1</option>
-        <option>Filter2</option>
-        <option>Filter3</option>
-      </select>
+      <ng-select
+            placeholder="SelectFilters"
+            [options]="filters"
+            [(ngModel)]="selectedFilter"
+            class="selectpicker">
+      </ng-select>
     <div class="info-bar">
       <div>
         <i class="fa fa-circle blue" aria-hidden="true"></i>
@@ -62,7 +62,9 @@
           <th>13/4 <b>FRI</b></th>
           <th>14/4 <b>SAT</b></th>
           <th>15/4 <b>SUN</b></th>
-          <th><i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+          <th>
+            <div class="show-detailed-info" (click)="expendToggle()"><i *ngIf="!expendViewAll;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -72,10 +74,10 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView" class="td-title">Front Bar</div>
+                <div *ngIf="expendView1" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -83,10 +85,10 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView" class="td-title">Front Bar</div>
+                <div *ngIf="expendView1" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -97,15 +99,15 @@
             <div class="bg-red td-cell">
               <div class="stick red-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView" class="td-title">Front Bar</div>
+                <div *ngIf="expendView1" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
           <td></td>
-          <td><div class="show-detailed-info" (click)="expendView=!expendView"><i *ngIf="!expendView;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div></td>
+         <td><div class="show-detailed-info" (click)="expendView1=!expendView1"><i *ngIf="!expendView1;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div></td>
         </tr>
         <tr>
           <td><div class="td-cell">Peter Barnes</div></td>
@@ -113,10 +115,10 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView1" class="td-title">Front Bar</div>
+                <div *ngIf="expendView2" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -124,10 +126,10 @@
             <div class="bg-green td-cell">
               <div class="stick green-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView1" class="td-title">Front Bar</div>
+                <div *ngIf="expendView2" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -136,19 +138,19 @@
             <div class="bg-green td-cell">
               <div class="stick green-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView1" class="td-title">Front Bar</div>
+                <div *ngIf="expendView2" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
             <div class="bg-green td-cell">
               <div class="stick green-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView1" class="td-title">Front Bar</div>
+                <div *ngIf="expendView2" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -157,15 +159,15 @@
             <div class="bg-green td-cell">
               <div class="stick green-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView1" class="td-title">Front Bar</div>
+                <div *ngIf="expendView2" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView1" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView1" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
           <td></td>
-          <td><div class="show-detailed-info" (click)="expendView1=!expendView1"><i *ngIf="!expendView1;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div></td>
+          <td><div class="show-detailed-info" (click)="expendView2=!expendView2"><i *ngIf="!expendView2;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div></td>
         </tr>
         <tr>
           <td><div class="td-cell">Barry White</div></td>
@@ -173,10 +175,10 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -184,30 +186,19 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div class="bg-blue td-cell">
-              <div class="stick blue-stick"></div>
-              <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
-                <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -215,10 +206,10 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -226,10 +217,21 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="bg-blue td-cell">
+              <div class="stick blue-stick"></div>
+              <div class="td-text">
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
+                <div class="timeft">9:00am - 5:30pm</div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
@@ -240,14 +242,14 @@
             <div class="bg-blue td-cell">
               <div class="stick blue-stick"></div>
               <div class="td-text">
-                <div *ngIf="expendView2" class="td-title">Front Bar</div>
+                <div *ngIf="expendView3" class="td-title">Front Bar</div>
                 <div class="timeft">9:00am - 5:30pm</div>
-                <div *ngIf="expendView2" class="td-info">(Dispense)</div>
-                <div *ngIf="expendView2" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <div *ngIf="expendView3" class="td-info">(Dispense)</div>
+                <div *ngIf="expendView3" class="td-history"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
               </div>
             </div>
           </td>
-          <td><div class="show-detailed-info" (click)="expendView2=!expendView2"><i *ngIf="!expendView2;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div></td>
+          <td><div class="show-detailed-info" (click)="expendView3=!expendView3"><i *ngIf="!expendView3;else chevronUp" class="fa fa-chevron-down" aria-hidden="true"></i></div></td>
         </tr>
       </tbody>
     </table>
@@ -256,3 +258,99 @@
 <ng-template #chevronUp>
       <i class="fa fa-chevron-up" aria-hidden="true"></i>
 </ng-template>
+    
+<div class="mobile container">
+  <div class="row publish-shifts-bar">
+    <div class="week-bar">
+      <button class="btn btn-default"><i class="fa fa-caret-left" aria-hidden="true"></i></button>
+      <h5>WEEK ENDING 15/4</h5>
+      <button class="btn btn-default"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="row filter-bar">
+    <ng-select
+            placeholder="SelectFilters"
+            [options]="orderFilters"
+            [(ngModel)]="selectedOrder"
+            class="selectpicker">
+      </ng-select>
+      <ng-select
+            placeholder="SelectFilters"
+            [options]="filters"
+            [(ngModel)]="selectedFilter"
+            class="selectpicker">
+      </ng-select>
+  </div>
+  <div class="week-header">
+    <div class="week-item">
+      <div class="day">09/4</div>
+      <div class="week">MON</div>
+    </div>
+    <div class="week-item">
+      <div class="day">10/4</div>
+      <div class="week">TUE</div>
+    </div>
+    <div class="week-item">
+      <div class="day">11/4</div>
+      <div class="week">WED</div>
+    </div>
+    <div class="week-item">
+      <div class="day">12/4</div>
+      <div class="week">THU</div>
+    </div>
+    <div class="week-item">
+      <div class="day">13/4</div>
+      <div class="week">FRI</div>
+    </div>
+    <div class="week-item">
+      <div class="day">14/4</div>
+      <div class="week">SAT</div>
+    </div>
+    <div class="week-item">
+      <div class="day">15/4</div>
+      <div class="week">SUN</div>
+    </div>
+  </div>
+  <div class="datas">
+    <div class="data-item" (click)="mexpendView1=!mexpendView1">
+      <div class="name-field">
+        Barry White
+      </div>
+      <div class="data-field bg-blue">
+        <div class="stick blue-stick"></div>
+        <div class="td-text">
+          <div *ngIf="mexpendView1" class="td-title">Front Bar</div>
+          <div class="timeft">9:00am - 5:30pm</div>
+          <div *ngIf="mexpendView1" class="td-info">(Dispense)</div>
+        </div>
+      </div>
+    </div>
+    <div class="data-item" (click)="mexpendView2=!mexpendView2">
+      <div class="name-field">
+        Barry White
+      </div>
+      <div class="data-field bg-red">
+        <div class="stick red-stick"></div>
+        <div class="td-text">
+          <div *ngIf="mexpendView2" class="td-title">Front Bar</div>
+          <div class="timeft">9:00am - 5:30pm</div>
+          <div *ngIf="mexpendView2" class="td-info">(Dispense)</div>
+        </div>
+      </div>
+    </div>
+    <div class="data-item" (click)="mexpendView3=!mexpendView3">
+      <div class="name-field">
+        Barry White
+      </div>
+      <div class="data-field bg-green">
+        <div class="stick green-stick"></div>
+        <div class="td-text">
+          <div *ngIf="mexpendView3" class="td-title">Front Bar</div>
+          <div class="timeft">9:00am - 5:30pm</div>
+          <div *ngIf="mexpendView3" class="td-info">(Dispense)</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

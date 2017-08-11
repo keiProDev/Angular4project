@@ -119,10 +119,15 @@
 .logos img:first-child{
 	padding-right: 27px;
 	border-right: 2px solid #c7c7c7;
+	height:59px;
 }
 .logos img:nth-child(2){
 	padding-left: 27px;
 	padding-right: 20px;
+	height:59px;
+}
+.logos img:last-child{
+	height:59px;
 }
 .create_account_title{
 	padding: 15px;

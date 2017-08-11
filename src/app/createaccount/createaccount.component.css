@@ -94,10 +94,15 @@
 .logos img:first-child{
 	padding-right: 27px;
 	border-right: 2px solid #c7c7c7;
+	height:59px;
 }
 .logos img:nth-child(2){
 	padding-left: 27px;
 	padding-right: 20px;
+	height:59px;
+}
+.logos img:last-child{
+	height:59px;
 }
 .create_account_title{
 	padding: 15px;
@@ -217,22 +222,26 @@
 		margin:0 15px;
 		margin-bottom: 3.33vw;
 	}
+	.logos{
+		margin:4vw 0px;
+	}
 	.logos img:first-child{
-		width:20.533vw;
-		height:8.2667vw;
-		padding-right:3.4vw;
+		/* width:18.93334vw; */
+		height:6.7vw;
+		padding:0;
+		padding-right:1.5vw;
 	}
 	.logos img:nth-child(2){
-		width:25.466vw;
-		height:7.333vw;
-		padding-left:3.4vw;
-		padding-right:0;
+		/* width:25.466vw; */
+		height:6.7vw;
+		padding:0;
+		padding-left:1.5vw;
 	}
 	.logos img:last-child{
-		width:32.667vw;
-		height:8.2667vw;
-		padding-left:3.4vw;
-
+		/* width:32.667vw; */
+		height:6.7vw;
+		padding:0;
+		padding-left:1vw;
 	}
 	.mobile-pass_require{
 		display: initial;

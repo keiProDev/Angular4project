@@ -9,9 +9,26 @@ import {MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA} from '@angular/ma
 
 export class RosteringComponent implements OnInit {
   constructor(public dialog: MdDialog) { }
-  expendView = true;
+  expendViewAll = true;
   expendView1 = true;
-  expendView2 = false;
+  expendView2 = true;
+  expendView3 = false;
+  mexpendView1 = true;
+  mexpendView2 = true;
+  mexpendView3 = false;
+  selectedFilter = 'All';
+  selectedOrder = "Filter1";
+  filters = [
+        {value: '0', label: 'All'},
+        {value: '1', label: 'Filter1'},
+        {value: '2', label: 'Filter2'},
+        {value: '3', label: 'Filter3'}
+  ];
+  orderFilters =[
+        {value: '1', label: 'Filter1'},
+        {value: '2', label: 'Filter2'},
+        {value: '3', label: 'Filter3'}
+  ];
   ngOnInit() {
   }
 
@@ -24,9 +41,20 @@ export class RosteringComponent implements OnInit {
       width: '480px',
       height: '430px'
     });
-    
-
   }
+  expendToggle(){
+     this.expendViewAll = !this.expendViewAll;
+     if (this.expendViewAll==true){
+        this.expendView1 = true;
+        this.expendView2 = true;
+        this.expendView3 = true;
+     }else{
+        this.expendView1 = false;
+        this.expendView2 = false;
+        this.expendView3 = false;
+     }
+  }
+
 
 }
 

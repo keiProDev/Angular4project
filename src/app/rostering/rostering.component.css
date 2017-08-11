@@ -15,16 +15,16 @@
     border-radius: 13px;
     outline: 0px;
     font-family: 'Lato', sans-serif;
-    font-size : 12px;
+    font-size : 12px!important;
     margin-right:35px;
 }
-.filter-bar label{
+
+.filter-br label{
     color:#9b9b9c;
     font-family: 'Open Sans', sans-serif;
     font-size : 12px;
     font-weight: 400;
     letter-spacing: 0.5px!important;
-
 }
 .filter-bar .filter-list{
     float: left;
@@ -83,11 +83,14 @@
     float: none;
     display: inline-block;
 }
+
 .publish-shifts-bar .week-bar button{
     width:36px;
     height:36px;
     display: inline-block;
 }
+
+
 .publish-shifts-bar .week-bar h5{
     display: inline-block;
     font-family: 'Lato', sans-serif;
@@ -95,6 +98,7 @@
     font-weight:bold;
     margin:0 25px;
 }
+
 .data-table thead tr{
     height:59px;
     background-color:#f2f4f7;
@@ -191,4 +195,138 @@
 }
 .bg-white{
     background-color:white;
+}
+.mobile{
+    display: none;
+}
+@media screen and (max-width:750px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: initial;
+    }
+    .filter-bar{
+        text-align: center;
+    }
+    .publish-shifts-bar{
+        height: initial;
+        background-color:transparent;
+        text-align: center;
+        margin-top:4vw;
+    }
+    
+    .selectpicker{
+        background-color:#333333;
+        color:#fff;
+        width:45.06667vw;
+        height:9.2vw!important;
+        font-size:3.2vw!important;
+        text-align-last: center;
+        border-radius: 1.333vw;
+        outline: 0px;
+        font-family: 'Lato', sans-serif;
+        margin:3.33vw 0.66vw;
+    }
+    .publish-shifts-bar .week-bar{
+        margin-top:1.7333vw;
+        float: none;
+        display: inline-block;
+    }
+
+    .publish-shifts-bar .week-bar button{
+        width:9.6vw;
+        height:9.6vw;
+        display: inline-block;
+    }
+    .publish-shifts-bar .week-bar button i{
+        font-size:4vw;
+    }
+    .publish-shifts-bar .week-bar h5{
+        font-size : 3.2vw;
+    }
+    .week-header{
+        background-color:#dadcdd;
+    }
+    .week-item{
+        background-color:#f2f4f7;
+        display: table-cell;
+        width:15vw;
+        height:9.8666vw;
+        padding-top:2vw;
+        border-right: 2px solid #dadcdd;
+    }
+    .week-item:last-child{
+        border-right:none;
+    }
+    .week-item:first-child{
+        margin:0;
+    }
+    .week-item .day{
+        font-size:2.9333vw;
+        font-family: 'Open Sans', sans-serif;
+        color:#8f8f8f;
+        text-align: center;
+        line-height: 2.6667vw;
+    }
+    .week-item .week{
+        font-size:2.9333vw;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        color:#393939;
+        text-align: center;
+    }
+    .stick{
+        position: absolute;
+        width:1.8666vw;
+        height:80%;
+        border-radius: 1vw;
+        left:2vw;
+        top:10%;
+    }
+    .data-item{
+        max-height:23.333vw;
+        background-color: white;
+        border-top:1px solid #e2e2e2;
+        overflow: hidden;
+    }
+    .data-item .name-field{
+        float:left;
+        font-size:3.46667vw;
+        font-weight: 400;
+        font-family: "Lato";
+        color:#333;
+        margin:3.333vw 0 0 3.33vw;
+        /* margin-left:25px; */
+    }
+    .data-item .data-field{
+       float:right;
+        position: relative;
+        width:52.93333vw;
+        padding:3.3333vw 0px;
+    }
+    .data-item .td-text{
+        margin-left:6.6667vw;
+    }
+    .td-text .td-title{
+        font-family: "Lato";
+        font-size:3.7333vw;
+        color:#8f8f8f;
+        font-weight: bold;
+    }
+    .td-text .timeft{
+        font-family: "Lato";
+        font-size:3.46666vw;
+        color:#333;
+        font-weight: bold;
+    }
+    .td-text .td-info{
+        font-family: "Lato";
+        font-size:3.4666vw;
+        color:#333;
+        font-weight: 400;
+    }
+    .td-text .td-history{
+
+    }
 }

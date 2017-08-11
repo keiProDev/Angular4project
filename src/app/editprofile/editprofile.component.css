@@ -21,16 +21,38 @@
 .edit-form form{
     margin-top:25px;
     width:794px;
-    height:235px;
-    background-color:white;
-    border-radius: 10px;
     padding-top:20px;
+}
+.edit-form form .credential-field{
+    background-color:white;
+    overflow: hidden;
+    padding-top:20px;
+    padding-bottom:25px;
+    border-radius: 10px;
+}
+.edit-form form .sequrity-field{
+    background-color:white;
+    overflow: hidden;
+    padding-top:20px;
+    padding-bottom:15px;
+    border-radius: 10px;
+    margin-top:20px;
+}
+.edit-form form .button-group{
+    margin-top:20px;
 }
 .form-group{
     position:relative;
 }
 .form-group input{
     padding-left:30px;
+    height:40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size:13px;
+    font-weight: 400;
+    background-color:#f8f8f8;
+}
+.form-group select{
     height:40px;
     font-family: 'Open Sans', sans-serif;
     font-size:13px;
@@ -47,6 +69,9 @@
     left:5px;
     bottom:8px;
 }
+.button-group{
+    padding-bottom:20px;
+}
 .change-title{
     margin-left:7px;
     font-family: 'Lato';
@@ -55,7 +80,7 @@
     cursor: pointer;
 
 }
-.cancel-btn{
+.button-group .cancel-btn{
     font-family: 'Lato';
     font-weight: 700;
     font-size:11px;
@@ -63,7 +88,7 @@
     line-height: 40px;
     margin-right:25px;
 }
-.save-btn a{
+.button-group .save-btn a{
     font-family: 'Lato';
     font-weight: 700;
     font-size:11px;
@@ -73,5 +98,68 @@
     line-height: 40px;
     border-radius: 20px;
     outline: 0;
+}
+@media screen and (max-width:750px){
+    .container{
+        padding:0!important;
+    }
+    .edit-form{
+        width:92vw;
+    }
+    .profile-photo img{
+        width:23.6vw;
+    }
+    .profile-photo .edit-btn{
+        position: absolute;
+        top:0;
+        width:7.33vw;
+        margin-left: -5.33vw;
+    }
+    .edit-form form{
+        margin-top:3.33vw;
+        width:92vw;
+    }
+    .edit-form .greeting{
+        font-size:5.6vw;
+        text-align: center;
+    }
+    .form-group input{
+        padding-left:8vw;
+        height:10.6vw;
+        font-size:3.46vw;
+    }
+    .form-group select{
+        height:10.6vw;
+        font-size:3.46vw;
+    }
+    .form-group label{
+        font-size:3.46vw;
+    }
+    .form-group img{
+        left:1.33vw;
+        bottom:2.133vw;
+        width:6.133vw;
+    }
+    .key-img{
+        width:4vw;
+        height:4.6vw;
+    }
+    .change-title{
+        margin-left:7px;
+        font-size:3.46vw;
+    }
+    .button-group .cancel-btn{
+        font-size:2.93vw;
+        height:10.667vw;
+        line-height: 10.667vw;
+        margin-right:6.66vw
+    }
+    .button-group .save-btn a{
+        font-size:2.93vw;
+        width:61.334vw;
+        height:10.667vw;
+        line-height: 10.667vw;
+        border-radius: 5.33vw;
+    }
 
 }

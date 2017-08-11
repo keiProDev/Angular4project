@@ -21,12 +21,18 @@ body{
 }
 
 .overay-pan-background{
+    max-width: 80vw!important;
     position: absolute!important;
     margin-top: -240px!important;
     margin-left: -215px!important;
     top: 50%!important;
     left: 50%!important;
     background-color:white;
+}
+@media screen and (max-width:750px){
+    .overay-pan-background{
+        margin-left: -40vw!important;
+    }
 }
 publish-modal .mat-dialog-title ,publish-confirm-modal .mat-dialog-title{
     font-size:30px!important;
@@ -109,6 +115,46 @@ publish-success-modal h1{
     color:white;
     font-family: 'Lato';
 }
+invite-modal h1{
+    font-size:30px!important;
+    font-weight: 700!important;
+    color:#333333;
+    font-family: 'Lato'!important;
+}
+invite-modal md-dialog-content h6{
+    font-size:13px!important;
+    font-family: 'Open Sans';
+    color:#888888;
+    font-weight: 400;
+}
+invite-modal md-dialog-content .email-box{
+    width:100%;
+    height:73px;
+    background-color:#f8f8f8;
+    border:1px solid #e5e4e4;
+    margin-top:60px;
+    line-height: 73px;
+    text-align: center;
+    font-family: 'Open Sans';
+    color:#888;
+    font-size:18px;
+}
+invite-modal md-dialog-content .button-group{
+    text-align: center;
+}
+invite-modal md-dialog-content .button-group .continue-btn{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    font-family: 'Lato';
+    font-size: 11px;
+    font-weight: 700;
+    outline: 0;
+    right:0!important;
+    top:0!important;
+    position: relative!important;
+}
 publish-success-modal .img-section{
     text-align: center;
 }
@@ -136,3 +182,102 @@ md-radio-button{
 .side-nav-container md-sidenav{
     max-width:250px!important;
 }
+/* select box sytling*/
+ng-select > div{
+    border: none!important;
+    outline:none!important;
+}
+ng-select > div > div.single > div.clear:hover, ng-select > div > div.single > div.toggle:hover {
+    background-color: transparent!important;
+}
+ng-select .options ul{
+    background-color:#333;
+}
+ng-select > div > div.single ,ng-select > div > div.single .value,ng-select > div > div.single .toggle ,ng-select > div > div.single .placeholder{
+    line-height: 26px!important;
+    height:26px!important;
+}
+ng-select > div > div.single .toggle{
+    color:white!important;
+    font-size:6px!important;
+}
+ng-select .filter{
+    display: none!important;
+}
+ng-select .placeholder{
+    font-family: "Lato";
+    font-size:11px;
+    font-weight: 400;
+    line-height: 26px;
+}
+@media screen and (max-width:750px){
+
+ng-select > div > div.single, ng-select > div > div.single .value,ng-select > div > div.single .toggle ,ng-select > div > div.single .placeholder{
+    line-height: 9.2vw!important;
+    height: 9.2vw!important;
+    font-size: 3.2vw!important;
+}
+ng-select > div > div.single .toggle{
+    font-size: 1.6vw!important;
+}
+
+}
+
+/*====================
+    navbar modal
+=====================*/
+workplace-modal h1{
+    font-family: 'Lato'!important;
+    font-size:30px!important;
+    font-weight: 700!important;
+}
+.wp-group-item{
+    display: block;
+    background-color:transparent;
+    border:none;
+    border-bottom: 2px solid #dbdbdb;
+    width:100%;
+    height:55px;
+    padding-top:10px;
+    outline: 0;
+    cursor:pointer;
+}
+.wp-group-item .row{
+    margin:0;
+}
+.wp-group-item .wp-title{
+    font-family: 'Open Sans';
+    font-size:14px;
+    font-weight:bold;
+    color:#393939;
+}
+.wp-group-item .wp-subscriptions{
+    font-family: 'Lato';
+    font-size:14px;
+    font-weight: bold;
+    color:#8f8f8f;
+}
+.wp-group-item .wp-role{
+    font-family: 'Open Sans';
+    font-size:13px;
+    font-weight:bold;
+    color:#888;
+}
+.wp-group-item .wp-site-count{
+    font-family: 'Open Sans';
+    font-size:13px;
+    font-weight:bold;
+    color:#888;
+}
+.close-btn{
+    position: absolute;
+    top:15px;
+    right:15px;
+    background-color:transparent;
+    border:none;
+    outline:none;
+    font-size:30px;
+}
+/*====================
+    end-navbar modal
+=====================*/

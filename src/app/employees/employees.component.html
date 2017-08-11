@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row filter-bar">
     <label>Order by:</label>
-    <select class="selectpicker">
-      <option>SELECT ORDER</option>
-      <option>Filter1</option>
-      <option>Filter2</option>
-      <option>Filter3</option>
-    </select>
-    <label>Display Employees: </label>
-    <select class="selectpicker">
-      <option>ALL</option>
-      <option>Filter1</option>
-      <option>Filter2</option>
-      <option>Filter3</option>
-    </select>
+    <ng-select
+            placeholder="SelectFilters"
+            [options]="orderFilters"
+            [(ngModel)]="selectedOrder"
+            class="selectpicker">
+      </ng-select>
+      <label>Filter by: </label>
+      <ng-select
+            placeholder="SelectFilters"
+            [options]="filters"
+            [(ngModel)]="selectedFilter"
+            class="selectpicker">
+      </ng-select>
   </div>
   <div class="row export-csv-bar">
     <h5>EMPLOYEES</h5>
@@ -33,34 +33,52 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of getEmployees();">
+        <tr *ngFor="let employee of getEmployees(); let i = index">
           <td>{{employee.name}}</td>
           <td>{{employee.id}}</td>
           <td>{{employee.site}}</td>
           <td>{{employee.email}}</td>
           <td>{{employee.mobile}}</td>
           <td>{{employee.status}}</td>
-          <td><img *ngIf="employee.other;else other" src="../assets/images/check-circle.png"></td>
+          <td>
+            <div *ngIf="!employee.other;else other">
+              <img src="../assets/images/info-circle.png" (click)="showToolTip(i)">
+              <div *ngIf="tooltip[i]" class="tooltip-box">
+                <div class="triangle-up"></div>
+                <div class="tooltip-title">Reinvite Employee</div>
+                <button class="btn btn-primary mt20 tooltip-btn" (click)="openInviteDialog()">SEND INVITE</button>
+              </div>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
     <ng-template #other>
-      <a tabindex="0" data-toggle="popover" data-html="true" data-content="<h4>Reinvite employee</h4><button class='btn btn-primary' (click)='sendInvite()'>Send Invite</button>"><img src="../assets/images/info-circle.png"></a>
+      <img src="../assets/images/check-circle.png">
     </ng-template>
   </div>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default" *ngFor="let employee of getEmployees();let i = index">
       <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#{{i}}">
+        <div class="panel-title">
             <div class="row">
+              <a data-toggle="collapse" data-parent="#accordion" href="#{{i}}">
               <div class="col-xs-4">{{employee.name}}</div>
               <div class="col-xs-4">{{employee.mobile}}</div>
               <div class="col-xs-3">{{employee.status}}</div>
-              <div cass="col-xs-1"><img *ngIf="employee.other;else other" src="../assets/images/check-circle.png"></div>
+              </a>
+              <div cass="col-xs-1">
+                <div *ngIf="!employee.other;else other">
+                  <img src="../assets/images/info-circle.png" (click)="showToolTip(i)">
+                  <div *ngIf="tooltip[i]" class="tooltip-box">
+                    <div class="triangle-up"></div>
+                    <div class="tooltip-title">Reinvite Employee</div>
+                    <button class="btn btn-primary mt20 tooltip-btn">SEND INVITE</button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </a>
-        </h4>
+        </div>
       </div>
       <div id="{{i}}" class="panel-collapse collapse">
         <div class="panel-body">

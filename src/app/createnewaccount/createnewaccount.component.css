@@ -91,6 +91,9 @@
 	text-align: center;
 	margin: 37px 0;
 }
+.logos img{
+	height:59px;
+}
 .logos img:first-child{
 	padding-right: 27px;
 	border-right: 2px solid #c7c7c7;

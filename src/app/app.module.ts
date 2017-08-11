@@ -9,8 +9,8 @@ import { MdSidenavModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent} from './app.component';
-import { NavbarComponent  } from './navbar/navbar.component';
-import { EmployeesComponent } from './employees/employees.component';
+import { NavbarComponent ,SidebarComponent,WorkplaceModal } from './navbar/navbar.component';
+import { EmployeesComponent ,InviteModal } from './employees/employees.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { RostersComponent } from './rosters/rosters.component';
@@ -27,6 +27,7 @@ import { DeclineshiftComponent } from './declineshift/declineshift.component';
 import { CreateaccountsuccessComponent } from './createaccountsuccess/createaccountsuccess.component';
 
 import {TodoSearchPipe} from './todolist/todolist.component';
+import {SelectModule} from 'angular2-select';
 
 import { EmployeeService } from './employee.service';
 import { NavbarService } from './navbar.service';
@@ -47,6 +48,8 @@ import { ForgotpasswordemailComponent } from './forgotpasswordemail/forgotpasswo
     PublishModal,
     PublishConfirmModal,
     PublishSuccessModal,
+    WorkplaceModal,
+    InviteModal,
     LoginComponent,
     ForgotPasswordComponent,
     PasswordlinkComponent,
@@ -58,7 +61,8 @@ import { ForgotpasswordemailComponent } from './forgotpasswordemail/forgotpasswo
     DeclineshiftComponent,
     CreateaccountsuccessComponent,
     CreatenewaccountComponent,
-    ForgotpasswordemailComponent
+    ForgotpasswordemailComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -69,17 +73,22 @@ import { ForgotpasswordemailComponent } from './forgotpasswordemail/forgotpasswo
     MdButtonModule,
     MdRadioModule,
     BrowserAnimationsModule,
-    MdSidenavModule
+    MdSidenavModule,
+    SelectModule
   ],
   exports: [
     PublishModal,
     PublishConfirmModal,
-    PublishSuccessModal
+    PublishSuccessModal,
+    InviteModal,
+    WorkplaceModal
   ],
   entryComponents: [
     PublishModal,
     PublishConfirmModal,
-    PublishSuccessModal
+    PublishSuccessModal,
+    InviteModal,
+    WorkplaceModal
   ],
   providers: [EmployeeService,NavbarService],
   bootstrap: [AppComponent]

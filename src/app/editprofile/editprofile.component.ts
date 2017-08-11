@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent implements OnInit {
-
+  Roles=[
+    "Manager",
+    "Senior",
+    "member",
+  ]
+  data = {
+    selectedRole :"Manager"
+  }
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,17 @@
+<div class="sidebar" *ngIf="nav.side_visible" [@enterAnimation]>
+
+    <div class="close-bar">
+        <div (click)="hide_sidebar()">&#x2715;</div>
+    </div>
+    <div class="side-items">
+        <div class="item">MENU ITEM1</div>
+        <div class="item">MENU ITEM2</div>
+        <div class="item">MENU ITEM3</div>
+        <div class="item">MENU ITEM4</div>
+        <div class="item">MENU ITEM5</div>
+    </div>
+
+    <div class="signout-bar">
+        <a class="btn btn-primary">SIGN OUT</a>
+    </div>
+</div>
