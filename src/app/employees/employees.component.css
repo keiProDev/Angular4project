@@ -33,6 +33,21 @@
     font-weight: 400;
     letter-spacing: 0.5px!important;
 }
+.search-box{
+    float:right;
+    position: relative
+}
+.search-box .search-icon{
+    font-size:16px;
+    position: absolute;
+    top:12px;
+    left:12px;
+}
+.search-box .search-input{
+    padding-left:35px;
+    width:256px;
+    height:40px;
+}
 .export-csv-bar{
     height: 61px;
     background-color:#fff;
@@ -195,6 +210,9 @@
 }
 
 @media screen and (max-width:767px){
+    .container{
+        padding:0;
+    }
     .filter-bar label{
         display: none;
     }
@@ -204,8 +222,22 @@
     .export-csv-bar{
         display: none;
     }
-    .container{
-        padding:0;
+    .search-box{
+        height:9.2vw;
+        width:100%;
+        padding: 0 15px;
+    }
+    .search-box .search-icon{
+        font-size:3.2vw;
+        top:3vw;
+        left:3vw;
+        margin-left:15px;
+    }
+    .search-box .search-input{
+        height:9.2vw;
+        width:100%;
+        padding-left:8vw;
+        font-size:3.2vw;
     }
     .pagenation-bar{
         margin-top:10px;
